@@ -1,0 +1,39 @@
+\documentclass{article}
+\usepackage[UTF8]{ctex}
+
+\begin{document}
+	
+	\begin{tabular}{|l|l|}
+		\hline
+		 迭代方法 & 迭代矩阵$G$   \\ \hline
+		 \multicolumn{2}{|l|}{收敛充分条件 } \\ \hline
+		 Jacobi迭代 & $D^{-1}(L+U)$   \\ \hline
+		 \multicolumn{2}{|l|}{1.$A$弱对角占优且不可约} \\ 
+		 \multicolumn{2}{|l|}{2.$A$对称正定，且$2D-A$正定} \\ \hline
+		 G-S迭代 & $ (D-L)^{-1}U$  \\ \hline
+		 \multicolumn{2}{|l|}{1.$A$弱对角占优且不可约} \\
+		 \multicolumn{2}{|l|}{2.$A$对称正定} \\  \hline
+		 SOR迭代 & $(D-\omega L)^{-1}((1-\omega)D+\omega U)$  \\ \hline
+		 \multicolumn{2}{|l|}{1.$A$严格对角占优且$0<\omega \le 1 $} \\ 
+		 \multicolumn{2}{|l|}{2.$A$弱对角占优且不可约，且$0<\omega \le 1 $} \\ 
+		 \multicolumn{2}{|l|}{3.$A$对称正定，且$0<\omega<2$} \\ 
+		 \multicolumn{2}{|l|}{注：由于$\rho(G_{SOR})\ge |1-\omega|$，所以SOR方法收敛的必要条件是$ 0<\omega<2$} \\ \hline
+		 SSOR  迭代 & $(D-\omega U)^{-1}[ (1-\omega)D+\omega L](D-\omega L)^{-1}[(1-\omega)D+\omega U]$  \\ \hline
+		 \multicolumn{2}{|l|}{$A$对称正定，且$0<\omega<2$} \\ \hline
+		 AOR迭代 & $(D-\gamma L)^{-1}[(1-\omega)D+(\omega-\gamma)L+\omega U]$  \\ \hline
+		 Richardson方法 & $I-\omega A$  \\ \hline
+		 \multicolumn{2}{|l|}{充要条件：$A$对称正定，且$0<\omega<\frac{2}{\lambda_1}$} \\
+		 \multicolumn{2}{|l|}{注：方法的最优参数$\omega_\ast=arg\min\limits_\omega\rho(G_R)=\frac{2}{\lambda_1+\lambda_n}$} \\  \hline
+		 JOR方法 & $I-\omega D^{-1}A$\\ \hline
+		 \multicolumn{2}{|l|}{$A$对称正定，且$0<\omega<\frac{2}{\rho(D^{-1}A)}$} \\ \hline
+		 ADI方法 & $(\alpha I-A_1)^{-1}(\alpha I-A_1)(\alpha I+A_1)^{-1}(\alpha I-A_2)$ \\ \hline
+		 \multicolumn{2}{|l|}{注：$A=A_1+A_2$} \\ 
+		 \multicolumn{2}{|l|}{$A_1$和$A_2$中有一个是对称正定，另一个是对称半正定，且$\alpha>0$} \\  \hline
+		 HSS方法 & $(\alpha I+S)^{-1}(\alpha I-H)(\alpha I+H)^{-1}(\alpha I -S)$ \\ \hline
+		 \multicolumn{2}{|l|}{注：$H=\frac{A+A^T}{2},S=\frac{A-A^T}{2}$} \\ 
+		 \multicolumn{2}{|l|}{A正定且$\alpha>0$} \\ \hline
+		 
+		 
+	\end{tabular}
+
+\end{document}
